@@ -18,7 +18,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying application to Kubernetes (Placeholder for deployment steps)'
+                echo 'Deploying application to Kubernetes
+                script{
+                    sh 'kubectl apply -f k8s-deployment.yaml'
             }
         }
     }
