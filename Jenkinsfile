@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/viswa86/Jenkins-k8s-integration.git'  // Replace with your repo
+                git branch: 'main', url: 'https://github.com/viswa86/Jenkins-k8s-integration.git'  // Replace with your repo
             }
         }
         stage('Build') {
